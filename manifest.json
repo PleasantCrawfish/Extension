@@ -1,0 +1,27 @@
+{
+  "name": "HeadHunter",
+  "options_page": "options.html",
+  "description": "Расширение для сохранения данных с hh.ru",
+
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-34.png"
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.hh.ru/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ]
+}
+
